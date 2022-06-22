@@ -48,7 +48,7 @@ function printMedia(std) {
 }
 
 
-studantes.map((xbacon, idx) => {
+studantes.map((media, idx) => {
   console.log(idx)
-  return printMedia(xbacon)
+  return printMedia(media)
 })
