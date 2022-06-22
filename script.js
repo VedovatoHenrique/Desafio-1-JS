@@ -37,8 +37,7 @@ const studantes = [
 function printMedia(std) {
   const media = (std.provaOne + std.provaTwo) / 2
 
-  const mediaCalc =
-    media >= 7
+  const mediaCalc = media >= 7
       ? `Parabéns, ${std.name}! Você foi aprovado no concurso`
       : `Não foi dessa vez ${std.name}! Tente novamente.`
 
