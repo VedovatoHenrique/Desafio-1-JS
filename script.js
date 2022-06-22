@@ -34,23 +34,22 @@ const studantes = [
   }
 ]
 
-let mediaCalc
+function printMedia(std) {
+  const media = (std.provaOne + std.provaTwo) / 2
 
-function mediaProva(studantes) {
-  let media = ((studantes.provaOne + studantes.provaTwo) / 2)
-  mediaCalc = media >= 7 ? `Parabéns, ${studantes.name}! Você foi aprovado no concurso` : `Não foi dessa vez ${studantes.name}! Tente novamente.`
-  console.log(studantes.name)
-  return media
-}
+  const mediaCalc =
+    media >= 7
+      ? `Parabéns, ${std.name}! Você foi aprovado no concurso`
+      : `Não foi dessa vez ${std.name}! Tente novamente.`
 
-function printMedia(std){
   console.log(std.name)
-  return `
-  A média do(a) aluno(a) ${std.name} é: ${mediaProva(std)}\n
-  ${mediaCalc}`
+  alert(`
+  A média do(a) aluno(a) ${std.name} é: ${media}\n
+  ${mediaCalc}`)
 }
 
-for ( let studant of studantes) {
-  let mediaMensage = printMedia(studant)
-  alert (mediaMensage)
-}
+
+studantes.map((xbacon, idx) => {
+  console.log(idx)
+  return printMedia(xbacon)
+})
